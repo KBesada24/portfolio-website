@@ -73,7 +73,7 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+<div className="ml-10 flex items-baseline gap-4">
               {navItems.map((item, index) => (
                 <motion.button
                   key={item.name}
@@ -90,7 +90,7 @@ const Navigation = () => {
           </div>
 
           {/* Theme Toggle & Social Links */}
-          <div className="hidden md:flex items-center space-x-4">
+<div className="hidden md:flex items-center gap-4">
             <motion.a
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -125,7 +125,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-2">
+<div className="md:hidden flex items-center gap-2">
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -170,7 +170,7 @@ const Navigation = () => {
         }}
         className="md:hidden overflow-hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-t border-gray-200 dark:border-gray-800"
       >
-        <motion.div className="px-2 pt-2 pb-3 space-y-1">
+<motion.div className="px-2 pt-2 pb-3 grid gap-1">
           {navItems.map((item) => (
             <motion.button
               key={item.name}
@@ -207,7 +207,7 @@ const Navigation = () => {
               },
               closed: { opacity: 0, y: 20 },
             }}
-            className="flex items-center space-x-4 px-3 py-2"
+className="flex items-center gap-4 px-3 py-2"
           >
             <a
               href={personalInfo.links.github}

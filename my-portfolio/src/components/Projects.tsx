@@ -150,7 +150,7 @@ const Projects = () => {
                     <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
                       Key Features
                     </h4>
-                    <ul className="space-y-2">
+<ul className="flex flex-col gap-2">
                       {project.features.slice(0, 4).map((feature, idx) => (
                         <li key={idx} className="flex items-center text-sm text-gray-600 dark:text-gray-400">
                           <Zap size={14} className="text-blue-500 mr-2 flex-shrink-0" />
@@ -166,7 +166,7 @@ const Projects = () => {
                       <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
                         Key Achievements
                       </h4>
-                      <ul className="space-y-2">
+<ul className="flex flex-col gap-2">
                         {project.achievements.slice(0, 3).map((achievement, idx) => (
                           <li key={idx} className="flex items-start text-sm text-gray-600 dark:text-gray-400">
                             <TrendingUp size={14} className="text-green-500 mr-2 flex-shrink-0 mt-0.5" />

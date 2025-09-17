@@ -1,5 +1,7 @@
 import Navigation from '@/components/Navigation';
 import Hero from '@/components/Hero';
+import Projects from '@/components/Projects';
+import Skills from '@/components/Skills';
 
 export default function Home() {
   return (
@@ -22,19 +24,8 @@ export default function Home() {
           </div>
         </section>
         
-        <section id="projects" className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Projects</h2>
-            <p className="text-gray-600 dark:text-gray-400">Coming soon...</p>
-          </div>
-        </section>
-        
-        <section id="skills" className="min-h-screen flex items-center justify-center">
-          <div className="text-center">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Skills</h2>
-            <p className="text-gray-600 dark:text-gray-400">Coming soon...</p>
-          </div>
-        </section>
+        <Projects />
+        <Skills />
         
         <section id="contact" className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
           <div className="text-center">
