@@ -82,7 +82,7 @@ const Projects = () => {
             variants={containerVariants}
             className="grid md:grid-cols-2 gap-8"
           >
-            {filteredProjects.map((project, index) => (
+            {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}
                 variants={itemVariants}
