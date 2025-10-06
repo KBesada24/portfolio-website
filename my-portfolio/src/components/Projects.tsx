@@ -49,11 +49,11 @@ const Projects = () => {
           variants={containerVariants}
         >
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <motion.div variants={itemVariants} className="flex flex-col items-center justify-center text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 text-center">
               Featured Projects
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl text-center">
               A showcase of my work, featuring full-stack applications, development tools, and educational projects
             </p>
           </motion.div>
