@@ -64,7 +64,7 @@ const Hero = () => {
                 transition={{ delay: 0.2, duration: 0.8 }}
                 className="text-blue-600 dark:text-blue-400 font-semibold text-lg mb-4"
               >
-                Hello, I'm
+                Hello, I&apos;m
               </motion.p>
               <motion.h1
                 initial={{ opacity: 0, x: -20 }}
