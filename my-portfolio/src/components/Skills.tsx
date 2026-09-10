@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Code, Database, Wrench, Globe, ChevronDown } from 'lucide-react';
+import { Code, Database, Wrench, Globe } from 'lucide-react';
 import { skills } from '@/data/portfolio';
 
 const Skills = () => {
@@ -67,7 +67,7 @@ const Skills = () => {
       width: `${proficiency}%`,
       transition: {
         duration: 1,
-        ease: "easeOut",
+        ease: "easeOut" as const,
         delay: 0.2,
       },
     }),

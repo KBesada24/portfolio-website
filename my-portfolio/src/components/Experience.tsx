@@ -6,6 +6,11 @@ import { useInView } from 'react-intersection-observer';
 import { Calendar, MapPin, TrendingUp, Zap, Building, Award } from 'lucide-react';
 import { experience } from '@/data/portfolio';
 
+const formatMetricLabel = (key: string) => key
+  .replace(/([A-Z])/g, ' $1')
+  .replace(/M C Ps/g, 'MCPs')
+  .trim();
+
 const Experience = () => {
   const [selectedType, setSelectedType] = useState('All');
   const [ref, inView] = useInView({
@@ -54,7 +59,7 @@ const Experience = () => {
               Professional Experience
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-center">
-              My journey through impactful roles in web development, team leadership, and technical education
+              Building production AI systems, full-stack products, and high-impact engineering teams
             </p>
           </motion.div>
 
@@ -87,21 +92,25 @@ const Experience = () => {
                 key={exp.id}
                 variants={itemVariants}
                 whileHover={{ y: -5 }}
-                className="bg-gray-50 dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+                className={`bg-gray-50 dark:bg-gray-900 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden ${
+                  exp.featured ? 'md:col-span-2 ring-1 ring-blue-500/10' : ''
+                }`}
               >
                 {/* Experience Header */}
                 <div className="p-8">
                   <div className="flex items-start justify-between mb-6">
                     <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
+                      <div className="flex flex-wrap items-center gap-2 mb-2">
                         <Building size={20} className="text-blue-600 dark:text-blue-400" />
                         <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                           {exp.company}
                         </h3>
                         <span className={`px-3 py-1 text-xs font-medium rounded-full ${
-                          exp.type === 'Internship' 
-                            ? 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200'
-                            : 'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200'
+                          exp.type === 'Full-time'
+                            ? 'bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200'
+                            : exp.type === 'Internship'
+                              ? 'bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200'
+                              : 'bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200'
                         }`}>
                           {exp.type}
                         </span>
@@ -109,7 +118,7 @@ const Experience = () => {
                       <p className="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-2">
                         {exp.position}
                       </p>
-                      <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
+                      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
                         <div className="flex items-center">
                           <MapPin size={14} className="mr-1" />
                           {exp.location}
@@ -124,14 +133,16 @@ const Experience = () => {
 
                   {/* Key Metrics */}
                   {exp.impact && (
-                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+                    <div className={`grid grid-cols-2 gap-4 mb-6 ${
+                      exp.featured ? 'lg:grid-cols-6' : 'lg:grid-cols-3'
+                    }`}>
                       {Object.entries(exp.impact).map(([key, value]) => (
                         <div key={key} className="text-center p-3 bg-white dark:bg-gray-800 rounded-lg">
                           <div className="text-lg font-bold text-blue-600 dark:text-blue-400">
                             {value}
                           </div>
                           <div className="text-xs text-gray-500 dark:text-gray-400 capitalize">
-                            {key.replace(/([A-Z])/g, ' $1').trim()}
+                            {formatMetricLabel(key)}
                           </div>
                         </div>
                       ))}
@@ -162,7 +173,7 @@ const Experience = () => {
                       <Award size={16} className="mr-2 text-green-600 dark:text-green-400" />
                       Key Achievements
                     </h4>
-                    <ul className="flex flex-col gap-3">
+                    <ul className={`grid gap-3 ${exp.featured ? 'md:grid-cols-2' : ''}`}>
                       {exp.achievements.map((achievement, idx) => (
                         <li key={idx} className="flex items-start text-sm text-gray-600 dark:text-gray-400">
                           <TrendingUp size={14} className="text-green-500 mr-3 flex-shrink-0 mt-0.5" />

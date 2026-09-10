@@ -1,40 +1,41 @@
 export const personalInfo = {
   name: "Kirollos M. Besada",
-  title: "Full Stack Developer",
-  subtitle: "Building scalable web applications with modern technologies",
+  title: "AI & Full Stack Developer",
+  subtitle: "Building production AI systems and scalable full-stack applications",
   email: "besadakirollos@gmail.com",
   phone: "(646) 247-0165",
   location: "New York, NY",
   links: {
     linkedin: "https://linkedin.com/in/kirollos-besada",
     github: "https://github.com/KBesada24",
-    portfolio: "https://kiroh-portfolio.vercel.app"
+    portfolio: "https://besadakirollos.me"
   },
-  bio: "Passionate Full Stack Developer with proven experience leading development teams and building scalable web applications. Specialized in React, Next.js, and Node.js with a track record of improving system efficiency by 35% and leading teams of 12+ developers.",
+  bio: "AI and Full Stack Developer building production agent systems, financial data workflows, and scalable web applications. Experienced with Python, Java, Model Context Protocol, React, and Next.js, with a track record of reducing complex workflows from minutes to seconds.",
 };
 
 export const skills = {
   frontend: [
-    { name: "React.js", proficiency: 90, projects: ["TheraMotive CRM", "Sync Master"] },
-    { name: "Next.js", proficiency: 95, projects: ["TheraMotive CRM", "Sync Master", "Portfolio"] },
-    { name: "TypeScript", proficiency: 88, projects: ["TheraMotive CRM", "Sync Master"] },
+    { name: "React.js", proficiency: 90, projects: ["CodeCircuit AI", "ScheduleFirst AI", "TheraMotive CRM"] },
+    { name: "Next.js", proficiency: 95, projects: ["CodeCircuit AI", "TheraMotive CRM", "Sync Master", "Portfolio"] },
+    { name: "TypeScript", proficiency: 88, projects: ["CodeCircuit AI", "ScheduleFirst AI", "TheraMotive CRM"] },
     { name: "JavaScript", proficiency: 92, projects: ["All Projects", "CodePath Teaching"] },
-    { name: "TailwindCSS", proficiency: 85, projects: ["TheraMotive CRM", "Portfolio"] },
+    { name: "TailwindCSS", proficiency: 85, projects: ["CodeCircuit AI", "ScheduleFirst AI", "TheraMotive CRM", "Portfolio"] },
     { name: "Bootstrap", proficiency: 80, projects: ["Early Projects"] },
     { name: "HTML/CSS", proficiency: 95, projects: ["CodePath Teaching", "All Projects"] }
   ],
   backend: [
     { name: "Node.js", proficiency: 85, projects: ["TheraMotive CRM", "API Integrations"] },
     { name: "Golang", proficiency: 82, projects: ["Sync Master Backend"] },
-    { name: "Python", proficiency: 88, projects: ["Flappy Bird", "Early Projects"] },
+    { name: "Python", proficiency: 88, projects: ["RBC Capital Markets", "ScheduleFirst AI", "Flappy Bird"] },
     { name: "REST APIs", proficiency: 90, projects: ["TheraMotive", "Social Media Integrations"] },
     { name: "SOAP APIs", proficiency: 75, projects: ["Enterprise Integrations"] }
   ],
   databases: [
     { name: "MongoDB", proficiency: 85, projects: ["TheraMotive CRM"] },
-    { name: "PostgreSQL", proficiency: 78, projects: ["Database Systems Course"] },
+    { name: "PostgreSQL", proficiency: 78, projects: ["ScheduleFirst AI", "Database Systems Course"] },
     { name: "MySQL", proficiency: 80, projects: ["Various Projects"] },
-    { name: "SQLite", proficiency: 85, projects: ["Local Development"] }
+    { name: "SQLite", proficiency: 85, projects: ["RBC Capital Markets", "Local Development"] },
+    { name: "Convex", proficiency: 82, projects: ["CodeCircuit AI"] }
   ],
   tools: [
     { name: "Git/GitHub", proficiency: 90, projects: ["All Projects"] },
@@ -44,34 +45,60 @@ export const skills = {
     { name: "Postman", proficiency: 85, projects: ["API Testing"] },
     { name: "Figma", proficiency: 70, projects: ["UI/UX Design"] },
     { name: "Jest", proficiency: 80, projects: ["Unit Testing"] },
-    { name: "Cypress", proficiency: 85, projects: ["Sync Master E2E Testing"] }
+    { name: "Cypress", proficiency: 85, projects: ["Sync Master E2E Testing"] },
+    { name: "Solace Pub/Sub+", proficiency: 80, projects: ["RBC Capital Markets"] }
   ]
 };
 
 export const experience = [
   {
+    id: 3,
+    company: "RBC Capital Markets",
+    position: "AI Developer",
+    location: "Jersey City, New Jersey",
+    duration: "March 2026 – Present",
+    type: "Full-time",
+    technologies: ["Python", "Java", "Model Context Protocol", "SQLite", "Solace Pub/Sub+", "RHEL", "GitHub Actions", "Ansible"],
+    achievements: [
+      "Built an AI-powered bond recommendation system with custom Model Context Protocol servers, reducing recommendation generation from 15 minutes to under one minute",
+      "Built 3 custom MCPs for real-time financial data retrieval across 60,000+ bonds and securities spanning 11 sectors and 3 regions",
+      "Designed a mathematical scoring model with a 12+ point rubric, reducing agent output processing to sub-10-second average runs through automated filtering",
+      "Consolidated custom SQLite databases from 5+ data sources into a unified schema, eliminating manual reconciliation and enabling direct agent queries",
+      "Deployed Java and Python applications to production RHEL servers with GitHub Actions and Ansible, reducing deployment cycles by 2+ hours per release",
+      "Built a real-time market data streaming pipeline by integrating Solace Pub/Sub+ messaging into a custom MCP, eliminating stale bond and securities data during live trading sessions"
+    ],
+    impact: {
+      recommendationTime: "<1 min",
+      customMCPs: "3",
+      securities: "60K+",
+      processingTime: "<10s",
+      dataSources: "5+",
+      deploymentSavings: "2+ hrs"
+    },
+    featured: true
+  },
+  {
     id: 1,
     company: "TheraMotive",
-    position: "Web Development Lead Intern",
+    position: "Software Engineer Lead Intern",
     location: "Brooklyn, New York",
     duration: "May 2024 – August 2024",
     type: "Internship",
     technologies: ["NextJS", "MongoDB", "TypeScript", "Node.js", "TailwindCSS"],
     achievements: [
-      "Built a 25+ feature CRM dashboard leading a 12-person development team netting a 15% efficiency increase",
-      "Built comprehensive authentication using Clerk to streamline user management, reducing manual overhead by 80%",
-      "Optimized a MongoDB database schema for efficient storage and retrieval of diverse data types reducing query response time by 40% (2.5s to 1.5s average)",
-      "Built 7+ API Integrations through REST, TypeScript connecting all major social media platforms for real time data",
-      "Streamlined workflow by strategically assigning tasks on Jira based on team strengths ensuring 100% on-time delivery"
+      "Delivered a 25+ feature CRM dashboard that increased operational efficiency by 15% while leading a 12-person development team",
+      "Developed 7+ RESTful TypeScript integrations with major social platforms, reducing data latency by 50% and increasing analytics coverage by 80%",
+      "Translated stakeholder requirements into technical specifications, enabling on-time delivery of every mandatory application requirement"
     ],
     impact: {
       efficiency: "15%",
       teamSize: "12",
-      overhead: "80%",
-      queryTime: "40%",
       integrations: "7+",
+      dataLatency: "50%",
+      dataCoverage: "80%",
       delivery: "100%"
-    }
+    },
+    featured: false
   },
   {
     id: 2,
@@ -94,11 +121,81 @@ export const experience = [
       accuracy: "90%",
       completion: "95%",
       mentorship: "25+"
-    }
+    },
+    featured: false
   }
 ];
 
 export const projects = [
+  {
+    id: 5,
+    title: "CodeCircuit AI",
+    subtitle: "AI-Powered Technical Interview Workspace",
+    description: "Built and launched an all-in-one interview preparation workspace with adaptive practice, real-time AI feedback, and progress tracking across technical, behavioral, and system design interviews.",
+    longDescription: "Designed and shipped a unified interview preparation platform that brings AI-generated questions, an in-browser coding workspace, streaming feedback, Socratic coaching, and learning analytics into one experience. The product supports multiple practice formats while helping users identify strengths, close skill gaps, and prepare with less context switching.",
+    technologies: ["Next.js", "TypeScript", "React", "Convex", "Clerk", "LLM APIs", "Tailwind CSS"],
+    features: [
+      "Technical, behavioral, and system design practice modes",
+      "Real-time AI scoring and improvement recommendations",
+      "Socratic Learn Mode with progressive guidance",
+      "In-browser code editor with multi-language support",
+      "AI-generated questions tailored to role and experience",
+      "Session history and progress analytics"
+    ],
+    achievements: [
+      "Reduced prep-tool switching by 67% across 20+ beta testers",
+      "Delivered AI scoring and recommendations in under 60 seconds while tracking 5+ learning metrics",
+      "Built a three-level Socratic Learn Mode that helped 60% of users complete problems independently versus a 35% baseline",
+      "Unified questions, coding exercises, feedback, and analytics in one workspace"
+    ],
+    metrics: {
+      practiceModes: "3",
+      betaTesters: "20+",
+      lessSwitching: "67%",
+      feedbackTime: "<60s"
+    },
+    duration: "January 2026 – March 2026",
+    status: "Live",
+    links: {
+      live: "https://codecircuit.app"
+    },
+    featured: true,
+    category: "Full Stack"
+  },
+  {
+    id: 6,
+    title: "ScheduleFirst AI",
+    subtitle: "AI-Powered Course Scheduling Platform",
+    description: "Built an AI scheduling platform that generates conflict-free CUNY course schedules around student preferences, professor quality, and time availability.",
+    longDescription: "Designed a full-stack scheduling workspace that combines course search, professor intelligence, conflict detection, and AI-assisted optimization. A FastAPI and FastMCP backend coordinates CUNY and professor data through Supabase, while the React interface lets students compare and refine schedules in real time.",
+    technologies: ["React", "TypeScript", "Vite", "Python", "FastAPI", "FastMCP", "Supabase", "PostgreSQL", "Google Gemini API"],
+    features: [
+      "AI-generated schedules based on personalized constraints",
+      "Automatic class-time and location conflict detection",
+      "Professor ratings aggregated across multiple sources",
+      "Real-time course and instructor search filters",
+      "Interactive calendar and schedule comparison",
+      "Unified student dashboard backed by Supabase"
+    ],
+    achievements: [
+      "Generated 80% conflict-free schedules and improved user satisfaction by 35%",
+      "Automated course selection 70% faster across approximately 1,500 instructors with a custom MCP server",
+      "Reduced schedule-optimization time by 45% for a platform designed to support 10,000+ students"
+    ],
+    metrics: {
+      conflictFree: "80%",
+      satisfaction: "35%",
+      fasterSelection: "70%",
+      optimizationTime: "45%"
+    },
+    duration: "October 2025 – December 2025",
+    status: "Completed",
+    links: {
+      github: "https://github.com/KBesada24/ScheduleFirst-AI"
+    },
+    featured: true,
+    category: "Full Stack"
+  },
   {
     id: 1,
     title: "Full Stack Sync Master",
@@ -135,6 +232,7 @@ export const projects = [
       demo: "https://demo.sync-master.com"
     },
     images: ["/projects/sync-master/dashboard.png", "/projects/sync-master/ai-suggestions.png"],
+    featured: false,
     category: "Full Stack"
   },
   {
@@ -173,6 +271,7 @@ export const projects = [
     links: {
       company: "https://theramotive.com"
     },
+    featured: false,
     category: "Full Stack"
   },
   {
@@ -208,6 +307,7 @@ export const projects = [
     },
     duration: "August 2024 – November 2024",
     status: "Completed",
+    featured: false,
     category: "Education"
   },
   {
@@ -237,6 +337,7 @@ export const projects = [
     links: {
       github: "https://github.com/KBesada24/flappy-bird-python"
     },
+    featured: false,
     category: "Game Development"
   }
 ];

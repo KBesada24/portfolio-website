@@ -82,9 +82,9 @@ const About = () => {
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white">My Journey</h3>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
-                  I&apos;m a current <span className="font-semibold text-blue-600 dark:text-blue-400">computer science student</span> who 
-                  was formerly pursuing medicine. While my path changed, the analytical thinking and problem-solving skills I developed 
-                  have become invaluable assets in software development.
+                  I&apos;m a <span className="font-semibold text-blue-600 dark:text-blue-400">computer science graduate and AI developer</span> who
+                  formerly pursued medicine. That path sharpened the analytical thinking and problem-solving skills I now apply to
+                  production AI systems and full-stack software.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                   I&apos;ve always been passionate about <span className="font-semibold text-purple-600 dark:text-purple-400">tinkering with technology</span> and 

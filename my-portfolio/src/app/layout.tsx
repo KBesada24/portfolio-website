@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -9,25 +9,29 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Kirollos Besada - Full Stack Developer",
-  description: "Full Stack Developer specializing in React, Next.js, and Node.js. Building scalable web applications with modern technologies.",
-  keywords: "Full Stack Developer, React, Next.js, Node.js, TypeScript, Web Development, Portfolio",
+  title: "Kirollos Besada - AI & Full Stack Developer",
+  description: "AI and Full Stack Developer building production agent systems, financial data workflows, and scalable web applications.",
+  keywords: "AI Developer, Full Stack Developer, Model Context Protocol, Python, Java, React, Next.js, TypeScript, Portfolio",
   authors: [{ name: "Kirollos Besada" }],
   creator: "Kirollos Besada",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://kiroh-portfolio.vercel.app",
-    title: "Kirollos Besada - Full Stack Developer",
-    description: "Full Stack Developer specializing in React, Next.js, and Node.js. Building scalable web applications with modern technologies.",
+    url: "https://besadakirollos.me",
+    title: "Kirollos Besada - AI & Full Stack Developer",
+    description: "AI and Full Stack Developer building production agent systems, financial data workflows, and scalable web applications.",
     siteName: "Kirollos Besada Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kirollos Besada - Full Stack Developer",
-    description: "Full Stack Developer specializing in React, Next.js, and Node.js. Building scalable web applications with modern technologies.",
+    title: "Kirollos Besada - AI & Full Stack Developer",
+    description: "AI and Full Stack Developer building production agent systems, financial data workflows, and scalable web applications.",
   },
-  viewport: "width=device-width, initial-scale=1",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowDown, Download, Mail, Github, Linkedin } from 'lucide-react';
+import { ArrowDown, Mail, Github, Linkedin } from 'lucide-react';
 import { personalInfo } from '@/data/portfolio';
 import Image from 'next/image';
 

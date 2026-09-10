@@ -54,7 +54,7 @@ const Projects = () => {
               Featured Projects
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl text-center">
-              A showcase of my work, featuring full-stack applications, development tools, and educational projects
+              AI products, full-stack platforms, and developer tools built to solve real problems
             </p>
           </motion.div>
 
@@ -87,13 +87,15 @@ const Projects = () => {
                 key={project.id}
                 variants={itemVariants}
                 whileHover={{ y: -5 }}
-                className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden"
+                className={`bg-white dark:bg-gray-800 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden ${
+                  project.featured ? 'md:col-span-2 ring-1 ring-blue-500/10' : ''
+                }`}
               >
                 {/* Project Header */}
                 <div className="p-8">
                   <div className="flex items-start justify-between mb-6">
                     <div className="flex-1">
-                      <div className="flex items-center gap-2 mb-2">
+                      <div className="flex flex-wrap items-center gap-2 mb-2">
                         <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                           {project.title}
                         </h3>
@@ -102,11 +104,18 @@ const Projects = () => {
                             In Progress
                           </span>
                         )}
+                        {project.status === 'Live' && (
+                          <span className="px-3 py-1 bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-200 text-xs font-medium rounded-full">
+                            Live
+                          </span>
+                        )}
                       </div>
                       <p className="text-blue-600 dark:text-blue-400 font-medium mb-3">
                         {project.subtitle}
                       </p>
-                      <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                      <p className={`text-gray-600 dark:text-gray-400 leading-relaxed ${
+                        project.featured ? 'max-w-4xl' : ''
+                      }`}>
                         {project.description}
                       </p>
                     </div>
@@ -128,36 +137,38 @@ const Projects = () => {
                     </div>
                   )}
 
-                  {/* Technologies */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
-                      Technologies Used
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm rounded-full"
-                        >
-                          {tech}
-                        </span>
-                      ))}
+                  <div className={project.featured ? 'grid gap-6 md:grid-cols-2' : ''}>
+                    {/* Technologies */}
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
+                        Technologies Used
+                      </h4>
+                      <div className="flex flex-wrap gap-2">
+                        {project.technologies.map((tech) => (
+                          <span
+                            key={tech}
+                            className="px-3 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm rounded-full"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
-                  </div>
 
-                  {/* Key Features */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
-                      Key Features
-                    </h4>
-<ul className="flex flex-col gap-2">
-                      {project.features.slice(0, 4).map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-600 dark:text-gray-400">
-                          <Zap size={14} className="text-blue-500 mr-2 flex-shrink-0" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                    {/* Key Features */}
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
+                        Key Features
+                      </h4>
+                      <ul className="flex flex-col gap-2">
+                        {project.features.slice(0, 4).map((feature, idx) => (
+                          <li key={idx} className="flex items-center text-sm text-gray-600 dark:text-gray-400">
+                            <Zap size={14} className="text-blue-500 mr-2 flex-shrink-0" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
 
                   {/* Achievements */}
@@ -166,7 +177,7 @@ const Projects = () => {
                       <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
                         Key Achievements
                       </h4>
-<ul className="flex flex-col gap-2">
+                      <ul className="flex flex-col gap-2">
                         {project.achievements.slice(0, 3).map((achievement, idx) => (
                           <li key={idx} className="flex items-start text-sm text-gray-600 dark:text-gray-400">
                             <TrendingUp size={14} className="text-green-500 mr-2 flex-shrink-0 mt-0.5" />
@@ -212,7 +223,7 @@ const Projects = () => {
                         className="flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors text-sm font-medium"
                       >
                         <ExternalLink size={16} className="mr-2" />
-                        Live Demo
+                        Live App
                       </a>
                     )}
                     {project.links?.demo && (
